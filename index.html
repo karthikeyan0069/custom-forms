@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Custom Forms Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+  <h2 class="text-center mb-4">🎨 Bootstrap Custom Forms Project</h2>
+
+  <!-- 1. Custom Checkbox -->
+  <h4>1. Custom Checkbox</h4>
+  <div class="custom-control custom-checkbox mb-3">
+    <input type="checkbox" class="custom-control-input" id="check1">
+    <label class="custom-control-label" for="check1">Custom Checkbox</label>
+  </div>
+
+  <!-- 2. Custom Radio -->
+  <h4>2. Custom Radio</h4>
+  <div class="custom-control custom-radio mb-2">
+    <input type="radio" class="custom-control-input" id="radio1" name="r">
+    <label class="custom-control-label" for="radio1">Option 1</label>
+  </div>
+
+  <div class="custom-control custom-radio mb-3">
+    <input type="radio" class="custom-control-input" id="radio2" name="r">
+    <label class="custom-control-label" for="radio2">Option 2</label>
+  </div>
+
+  <!-- 3. Inline Custom Controls -->
+  <h4>3. Inline Custom Controls</h4>
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" class="custom-control-input" id="inline1" name="i">
+    <label class="custom-control-label" for="inline1">Inline 1</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline mb-3">
+    <input type="radio" class="custom-control-input" id="inline2" name="i">
+    <label class="custom-control-label" for="inline2">Inline 2</label>
+  </div>
+
+  <!-- 4. Custom Switch -->
+  <h4>4. Custom Switch</h4>
+  <div class="custom-control custom-switch mb-3">
+    <input type="checkbox" class="custom-control-input" id="switch1">
+    <label class="custom-control-label" for="switch1">Toggle Switch</label>
+  </div>
+
+  <!-- 5. Custom Select -->
+  <h4>5. Custom Select</h4>
+  <select class="custom-select mb-3">
+    <option selected>Select Menu</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+
+  <!-- Select Sizes -->
+  <select class="custom-select custom-select-sm mb-2">
+    <option>Small Select</option>
+  </select>
+
+  <select class="custom-select custom-select-lg mb-3">
+    <option>Large Select</option>
+  </select>
+
+  <!-- 6. Custom Range -->
+  <h4>6. Custom Range</h4>
+  <input type="range" class="custom-range mb-4">
+
+  <!-- 7. Custom File Upload -->
+  <h4>7. Custom File Upload</h4>
+  <div class="custom-file mb-3">
+    <input type="file" class="custom-file-input" id="file1">
+    <label class="custom-file-label" for="file1">Choose file</label>
+  </div>
+
+</div>
+
+<!-- Script for file name display -->
+<script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
